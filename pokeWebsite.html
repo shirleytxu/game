@@ -3,8 +3,14 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    function myFunction() {
+      document.getElementById("tableexample").style.display = "block";
+    }
+  </script>
+
   <style>
-    #centerimg {
+    .centerimg {
       display: block;
       margin-left: auto;
       margin-right: auto;
@@ -38,73 +44,45 @@
       text-decoration: underline;
     }
 
+    table, th, td {
+      border: 1px solid green;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 15px;
+    }
   </style>
 
-  <title>Pokemon</title>
+  <title>Shirley's Top 3 Pokemon</title>
 </head>
 
 <body>
 
-  <!--  Pokemon Website -->
+  <!-- Welcome Section -->
   <h2 style="border:2px solid yellowgreen;font-size:260%;text-align:center;">
     « Welcome to Shirley's Top 3 Pokemon! »</h2>
 
+
+  <!-- Context -->
   <p> <abbr title="also known as Pocket Monsters in Japan!">Pokémon</abbr> is
     <q>a network designed for Pokémon players to find casual and competitive
       opportunities to play with each other!</q> <br>There are some pretty cool
-    Pokemon out there, so keep scrolling to view the favorite 5 Pokemon of
+    Pokemon out there, so keep scrolling to view the favorite Pokemon of
     yours truly.
   </p>
 
+  <!-- Citing Resources -->
   <a href="https://bulbapedia.bulbagarden.net/wiki/Main_Page" target="_blank">
     References from my brain...and Bulbapedia, <i> the community-driven Pokémon
-      encyclopedia</i>!</a>
-
-  <p style="font-size:180%"> </p>
-
-  <iframe src="https://bulbapedia.bulbagarden.net/wiki/Main_Page" height="400" width="1500" title="Bulbapedia"></iframe>
-  <p> So without further ado...<b>let's get into some awesome Pokemon!</b></p>
-
-  <hr />
-
-  <h3 style="border:1.3px solid yellowgreen"> ✧ Pokemon #1: Eevee ✧ </h3>
-  <p style="font-family:courier" ;> Dex Entry #133: The <b>Evolution</b> Pokemon</p>
-
-  <img src="C:\Users\Shirley\Documents\sDev\HonCompSci\eeveegif.gif" alt="Eevee" width="500" height="526" />
-
-  <p> Eevee is so cute and fluffy, as adorably
-    depicted in the GIF above- what more could you want? Try to decode this for
-    a fun fact about Eevee! &#8595; </p>
-  <bdo dir="rtl"> Eevee can evolve into 8 Pokemon! </bdo>
-  <p> This is what the riddle said: "Eevee can evolve into 8 Pokemon!" As you
-    may or may not know, Pokemon can only evolve into one other Pokemon. Eevee's
-    not the <b>Evolution</b> Pokemon for no reason! Eevee's evolutions
-    (or <i>eeveelutions</i>) are all equally cute-- read more about them
-    <b><i><a href="https://bulbapedia.bulbagarden.net/wiki/Eeveelution" target="_blank">
-          here! </i></b> </a>
-  </p>
-
-  <p style="font-size:85%"><del> Eevee also serves for a great Zoom call profile picture...</del> </p>
-
-  <hr />
-
-  <h3 style="border:1.3px solid yellowgreen"> ✧ Pokemon #2: Zoroark ✧ </h3>
-  <p style="font-family:courier" ;> Dex Entry #571: The <b>Illusion Fox</b> Pokemon</p>
-
-  <p style="text-align:center"><small> Click the Zoroark below to go to it's Bulbapedia Page!</small> </p>
-  <a href="https://bulbapedia.bulbagarden.net/wiki/Zoroark_(Pok%C3%A9mon)" target="_blank">
-    <img id="centerimg" src="C:\Users\Shirley\Documents\sDev\HonCompSci\zoroarkstill.png" alt="Zoroark Picture" style="width:300px;height:300px" />
+      encyclopedia</i>!
   </a>
 
-  <p> While I mainly like Zoroark for its sick looking black-red color scheme
-    and overall design, Zoroark also earns some pretty neat kudos points for the following: </p>
-  <ol>
-    <li>Taking great care of its (adorable) pre-evolution, Zoroa</li>
-    <li>Being extremely powerful! (and cool looking)</li>
-    <li>Its ability to transform into ANY Pokemon it wants! </li>
-      <img src="C:\Users\Shirley\Documents\sDev\HonCompSci\zoroarknuzzle.gif" alt="Zoroark Nuzzling Zoroa" style="float:right;width=200;height=102" />
+  <p><a href="#C1" style="color:yellowgreen;font-size:90%">Jump to Fav Pokemon #1: Eevee!</a></p>
+  <p><a href="#C2" style="color:yellowgreen;font-size:90%">Jump to Fav Pokemon #2: Zoroark!</a></p>
+  <p><a href="#C3" style="color:yellowgreen;font-size:90%">Jump to Fav Pokemon #3: Lucario!</a></p>
 
-      <pre style="text-align:center;font-size:75%">
+  <pre style="text-align:center;font-size:70%">
 
                         _,.------....___,.' ',.-.
                      ,-'          _,.--"        |
@@ -113,54 +91,173 @@
                  .   /     /                     ``.
                  |  |     .                       \.\
        ____      |___._.  |       __               \ `.
-     .'    `---""       ``"-.--"'`  \               .  \
-    .  ,            __               `              |   .
-    `,'         ,-"'  .               \             |    L
-   ,'          '    _.'                -._          /    |
-  ,`-.    ,".   `--'                      >.      ,'     |
- . .'\'   `-'       __    ,  ,-.         /  `.__.-      ,'
- ||:, .           ,'  ;  /  / \ `        `.    .      .'/
- j|:D  \          `--'  ' ,'_  . .         `.__, \   , /
-/ L:_  |                 .  "' :_;                `.'.'
-.    ""'                  """""'                    V
- `.                                 .    `.   _,..  `
-   `,_   .    .                _,-'/    .. `,'   __  `
-    ) \`._        ___....----"'  ,'   .'  \ |   '  \  .
-   /   `. "`-.--"'         _,' ,'     `---' |    `./  |
-  .   _  `""'--.._____..--"   ,             '         |
-  | ." `. `-.                /-.           /          ,
-  | `._.'    `,_            ;  /         ,'          .
- .'          /| `-.        . ,'         ,           ,
- '-.__ __ _,','    '`-..___;-...__   ,.'\ ____.___.'
- `"^--'..'   '-`-^-'"--    `-^-'`.''"""""`.,^.`.--'
-
+      .'    `---""       ``"-.--"'`  \               .  \
+      .  ,            __               `              |   .
+      `,'         ,-"'  .               \             |    L
+      ,'          '    _.'                -._          /    |
+      ,`-.    ,".   `--'                      >.      ,'     |
+      . .'\'   `-'       __    ,  ,-.         /  `.__.-      ,'
+      ||:, .           ,'  ;  /  / \ `        `.    .      .'/
+      j|:D  \          `--'  ' ,'_  . .         `.__, \   , /
+      / L:_  |                 .  "' :_;                `.'.'
+      .    ""'                  """""'                    V
+      `.                                 .    `.   _,..  `
+      `,_   .    .                _,-'/    .. `,'   __  `
+      ) \`._        ___....----"'  ,'   .'  \ |   '  \  .
+      /   `. "`-.--"'         _,' ,'     `---' |    `./  |
+      .   _  `""'--.._____..--"   ,             '         |
+      | ." `. `-.                /-.           /          ,
+      | `._.'    `,_            ;  /         ,'          .
+      .'          /| `-.        . ,'         ,           ,
+      '-.__ __ _,','    '`-..___;-...__   ,.'\ ____.___.'
+      `"^--'..'   '-`-^-'"--    `-^-'`.''"""""`.,^.`.--'
   </pre>
 
-      <p style="background-color:lightgreen;">Bulbasaur is the Seed Pokemon!</p>
-      <p> Did you know? </p>
+  <!-- Bulbapedia IFrame -->
+  <iframe class="centerimg" src="https://bulbapedia.bulbagarden.net/wiki/Main_Page" height="400" width="1500" title="Bulbapedia"></iframe>
+  <p> So without further ado...<b>let's get into some awesome Pokemon!</b></p>
 
-      <blockquote cite="http://www.pokemon.com">
-        While Bulbasaur is young, it uses the nutrients that are stored in the seed on its back in order to grow.
-      </blockquote>
+  <hr />
 
-      <table style="width:100%">
-        <tr>
-          <th>
-            <hr />
+  <!-- Eevee Section -->
+  <h3 id="C1" style="border:1.3px solid yellowgreen"> ✧ Pokemon #1: Eevee ✧ </h3>
+  <p style="font-family:courier"> Dex Entry #133: The <b>Evolution</b> Pokemon</p>
 
-            <i>If you haven't played Pokemon yet, <mark>I demand you do it now!</mark></i>
-            <hr />
+  <img src="eeveegif.gif" alt="Eevee" width="500" height="526" />
 
-            <small title="Student of The Bishop's School Class of 2023">Website created by Shirley Xu</small>
-            <p style="font-size:80%;"> Honors Comp Sci Project <br> 2020 </p>
-            <small address>
-              Visit us at: <br>
-              7607 La Jolla Blvd, La Jolla, CA 92037 <br>
-              USA
-            </small>
-            </address>
+  <p>
+    Eevee is so cute and fluffy, as adorably depicted in the GIF above- what
+    more could you want? Try to decode this for a fun fact about Eevee! &#8595;
+  </p>
+  <bdo dir="rtl"> Eevee can evolve into 8 Pokemon! </bdo>
+  <p>
+    This is what the riddle said: "Eevee can evolve into 8 Pokemon!" As you
+    may or may not know, Pokemon can only evolve into one other Pokemon. Eevee's
+    not the <b>Evolution</b> Pokemon for no reason! Eevee's evolutions
+    (or <i>eeveelutions</i>) are all equally cute-- read more about them
+    <b><i><a href="https://bulbapedia.bulbagarden.net/wiki/Eeveelution" target="_blank">
+          here! </a></i></b>
+  </p>
 
-            <p><a href=mailto:shirley.xu.23@bishops.com>Send me an email!</a></p>
+  <!-- Map, click each Eeveelution's face to go to their Bulbapedia Page -->
+  <p style="color:yellowgreen"> <b>Click on any of of the Eeveelutions's faces below to learn more about them!</b></p>
+  <img class="centerimg" src="eeveelutions.jpg" alt="Every Eeveelution" usemap="#workmap" width="352" height="550">
+  <map name="workmap">
+    <area shape="circle" coords="150,130,40" alt="Sylveon" href="https://bulbapedia.bulbagarden.net/wiki/Sylveon_(Pok%C3%A9mon)">
+    <area shape="circle" coords="270,130,40" alt="Glaceon" href="https://bulbapedia.bulbagarden.net/wiki/Glaceon_(Pok%C3%A9mon)">
+    <area shape="circle" coords="170,225,40" alt="Eevee" href="https://bulbapedia.bulbagarden.net/wiki/Eevee_(Pok%C3%A9mon)">
+    <area shape="circle" coords="110,255,40" alt="Espeon" href="https://bulbapedia.bulbagarden.net/wiki/Espeon_(Pok%C3%A9mon)">
+    <area shape="circle" coords="30,290,40" alt="Umbreon" href="https://bulbapedia.bulbagarden.net/wiki/Umbreon_(Pok%C3%A9mon)">
+    <area shape="circle" coords="190,295,40" alt="Flareon" href="https://bulbapedia.bulbagarden.net/wiki/Flareon_(Pok%C3%A9mon)">
+    <area shape="circle" coords="270,346,40" alt="Vaporeon" href="https://bulbapedia.bulbagarden.net/wiki/Vaporeon_(Pok%C3%A9mon)">
+    <area shape="circle" coords="140,385,40" alt="Jolteon" href="https://bulbapedia.bulbagarden.net/wiki/Jolteon_(Pok%C3%A9mon)">
+    <area shape="circle" coords="285,210,40" alt="Leafeon" href="https://bulbapedia.bulbagarden.net/wiki/Leafeon_(Pok%C3%A9mon)">
+  </map>
+
+  <p style="font-size:85%"><del> Eevee also serves for a great Zoom call profile picture...</del> </p>
+  <hr />
+
+  <!-- Zoroark Section -->
+  <h3 id="C2" style="border:1.3px solid yellowgreen"> ✧ Pokemon #2: Zoroark ✧ </h3>
+  <p style="font-family:courier"> Dex Entry #571: The <b>Illusion Fox</b> Pokemon</p>
+
+  <p style="text-align:center"><small> Click the Zoroark below to go to it's Bulbapedia Page!</small> </p>
+  <a href="https://bulbapedia.bulbagarden.net/wiki/Zoroark_(Pok%C3%A9mon)" target="_blank">
+    <img class="centerimg" src="zoroarkstill.png" alt="Zoroark Picture" style="width:300px;height:300px" />
+  </a>
+
+  <p>
+    While I mainly like Zoroark for its sick looking black-red color scheme
+    and overall design, Zoroark also earns some pretty neat kudos points for the
+    following:
+  </p>
+
+  <ol>
+    <li>Taking great care of its (adorable) pre-evolution, Zoroa</li>
+    <li>Being extremely powerful! </li>
+    <li>Its ability to transform into <span style="border: 2px solid limegreen">ANY</span> Pokemon it wants- isn't that <em>sooooo</em> cool?! </li>
+  </ol>
+
+  <p style="font-size:200%"> </p>
+  <img class="centerimg" src="zoroarktransform.gif" alt="Zoroark Transforming into Entei" height="204" width="400" />
+
+  <p style="font-size:200%"> </p>
+  <p> I'd say those are a couple solid reasons to like Zoroark! Onto the next Pokemon! </p>
+  <p>Last, but very, very much not least...</p>
+  <hr />
+
+  <!-- Lucario Section -->
+  <h3 id="C3" style="border:1.3px solid yellowgreen"> ✧ Pokemon #3: Lucario ✧ </h3>
+  <p style="font-family:courier"> Dex Entry #448: The <b>Aura</b> Pokemon</p>
+  <img class="centerimg" src="lucariomegalucario.png" alt="Lucario and Mega Lucario" width="450" height="322">
+  <p>
+    Lucario also has a Mega-Evolution (essentially a stage where the Lucario can
+    evolve another more powerful stage if the bond it shares with its trainer is
+    strong enough). Lucario is depicted to the right, while Mega-Lucario is
+    depicted to the left.
+  </p>
+  <p> As you can see from the above image... </p>
+  <blockquote cite="https://bulbapedia.bulbagarden.net/wiki/Lucario_(Pok%C3%A9mon)">
+    [Lucario] has developed four black appendages that hang down from its head,
+    which rise when Lucario reads or manipulates aura, a special energy that it
+    senses. Lucario can study this energy to predict the movements of their
+    opponents and track their quarry. They also have the power to manipulate
+    this energy in an offensive manner, in the form of explosive spheres of
+    energy.
+  </blockquote>
+  <p> And while looks alone are probably enough of a reason to like this Pokemon, here are a couple more reasons...</p>
+  <ul>
+    <li>Did ya just hear what I said about how "Lucario can study this energy to
+      <b>predict</b> the movements of their opponents"? Whaaaattt? How cool is that!
+    </li>
+    <li>No further words needed. Simply observe the GIFs below (the power tho!)</li>
+  </ul>
+  <img src="lucarioaurasphere.gif" alt="Lucario's Aura Sphere" width="480" height="249" style="float:left" />
+  <img src="lucariobonespin.gif" alt="Lucario's Bone Spin" width="444" height="249" style="float:right" />
+  <img class="centerimg" src="lucariostrong.gif" alt="Lucario's Very Strong!" width="500" height="249" />
+
+  <p style="font-size:180%"> </p>
+  <hr />
+
+  <!-- Favorite Pokemon and Contact -->
+  <p>
+    So... We've got three awesome Pokemon here! But Shirley, you may ask,
+    which one is your <b>~ABSOLUTE~</b> favorite? <br>Well, drumroll please...!!!
+  </p>
+
+  <table id="tableexample" style="width:100%;display:none">
+    <caption> Shirley's Top Pokemon, ranked
+    <tr>
+      <th> 3rd Place </th>
+      <th> 1st Place </th>
+      <th> 2nd Place </th>
+    </tr>
+    <tr>
+      <td>Eevee
+      <td>Zoroark
+      <td>Lucario
+    </tr>
+  </table>
+
+  <button type="button" onclick="myFunction()">Click to Rank the Pokemon!</button>
+
+  <hr />
+  <p>
+    Thank you so much for looking at my website! Thank you, Dr. J, for being
+    such a cool teacher &#128516;!
+  </p>
+  <small title="Student of The Bishop's School Class of 2023">Website created by Shirley Xu</small>
+  <p style="font-size:80%;"> Honors Comp Sci Project <br> 2020 </p>
+  <address>
+    <small>
+      Visit us at: <br>
+      7607 La Jolla Blvd, La Jolla, CA 92037 <br>
+      USA
+    </small>
+  </address>
+  <p> <a href=mailto:shirley.xu.23@bishops.com>Send me an email and let me know
+      which Pokemon is YOUR favorite!!</a>
+  </p>
 
 </body>
 
