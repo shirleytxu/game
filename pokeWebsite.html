@@ -2,15 +2,60 @@
 <html lang="en-US">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <script>
+  <script src="https://kit.fontawesome.com/a076d05399.js">
     function myFunction() {
       document.getElementById("tableexample").style.display = "block";
     }
   </script>
 
   <style>
+    p.inset {
+      outline-style: inset;
+    }
+
+    p.outset {
+      border-style: outset;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      padding: 12px 16px;
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    div {
+      border: 1px solid green;
+      margin: 50px 50px 50px 50px;
+      background-color: lightgreen;
+    }
+
+    #C1 {
+      border: 1.3px solid yellowgreen;
+    }
+
+    #C2 {
+      border: 1.3px solid yellowgreen;
+    }
+
+    #C3 {
+      border: 1.3px solid yellowgreen;
+    }
+
     .centerimg {
       display: block;
       margin-left: auto;
@@ -45,12 +90,15 @@
       text-decoration: underline;
     }
 
-    table, th, td {
+    table,
+    th,
+    td {
       border: 1px solid green;
       border-collapse: collapse;
     }
 
-    th, td {
+    th,
+    td {
       padding: 15px;
     }
   </style>
@@ -83,6 +131,7 @@
   <p><a href="#C2" style="color:yellowgreen;font-size:90%">Jump to Fav Pokemon #2: Zoroark!</a></p>
   <p><a href="#C3" style="color:yellowgreen;font-size:90%">Jump to Fav Pokemon #3: Lucario!</a></p>
 
+  <i class="fas fa-heart" style="color:yellowgreen"></i>
   <pre style="text-align:center;font-size:70%">
 
                         _,.------....___,.' ',.-.
@@ -116,12 +165,12 @@
 
   <!-- Bulbapedia IFrame -->
   <iframe class="centerimg" src="https://bulbapedia.bulbagarden.net/wiki/Main_Page" height="400" width="1500" title="Bulbapedia"></iframe>
-  <p> So without further ado...<b>let's get into some awesome Pokemon!</b></p>
+  <div> So without further ado...<b>let's get into some awesome Pokemon!</b></div>
 
   <hr />
 
   <!-- Eevee Section -->
-  <h3 id="C1" style="border:1.3px solid yellowgreen"> ✧ Pokemon #1: Eevee ✧ </h3>
+  <h3 id="C1"> ✧ Pokemon #1: Eevee ✧ </h3>
   <p style="font-family:courier"> Dex Entry #133: The <b>Evolution</b> Pokemon</p>
 
   <img src="eeveegif.gif" alt="Eevee" width="500" height="526" />
@@ -139,6 +188,13 @@
     <b><i><a href="https://bulbapedia.bulbagarden.net/wiki/Eeveelution" target="_blank">
           here! </a></i></b>
   </p>
+  <div class="dropdown">
+    <span>Mouse over me for a list of Eeveelutions!</span>
+    <div class="dropdown-content">
+      <p>Eeveelutions: Vaporeon, Jolteon, Flareon, Leafeon, Glaceon, Espeon,
+        Umbreon, Sylveon</p>
+    </div>
+  </div>
 
   <!-- Map, click each Eeveelution's face to go to their Bulbapedia Page -->
   <p style="color:yellowgreen"> <b>Click on any of of the Eeveelutions's faces below to learn more about them!</b></p>
@@ -159,7 +215,7 @@
   <hr />
 
   <!-- Zoroark Section -->
-  <h3 id="C2" style="border:1.3px solid yellowgreen"> ✧ Pokemon #2: Zoroark ✧ </h3>
+  <h3 id="C2"> ✧ Pokemon #2: Zoroark ✧ </h3>
   <p style="font-family:courier"> Dex Entry #571: The <b>Illusion Fox</b> Pokemon</p>
 
   <p style="text-align:center"><small> Click the Zoroark below to go to it's Bulbapedia Page!</small> </p>
@@ -184,11 +240,11 @@
 
   <p style="font-size:200%"> </p>
   <p> I'd say those are a couple solid reasons to like Zoroark! Onto the next Pokemon! </p>
-  <p>Last, but very, very much not least...</p>
+  <p class="outset">Last, but very, very much not least...</p>
   <hr />
 
   <!-- Lucario Section -->
-  <h3 id="C3" style="border:1.3px solid yellowgreen"> ✧ Pokemon #3: Lucario ✧ </h3>
+  <h3 id="C3"> ✧ Pokemon #3: Lucario ✧ </h3>
   <p style="font-family:courier"> Dex Entry #448: The <b>Aura</b> Pokemon</p>
   <img class="centerimg" src="lucariomegalucario.png" alt="Lucario and Mega Lucario" width="450" height="322">
   <p>
@@ -197,7 +253,7 @@
     strong enough). Lucario is depicted to the right, while Mega-Lucario is
     depicted to the left.
   </p>
-  <p> As you can see from the above image... </p>
+  <p class="inset" style="outline-color:green"> As you can see from the above image... </p>
   <blockquote cite="https://bulbapedia.bulbagarden.net/wiki/Lucario_(Pok%C3%A9mon)">
     [Lucario] has developed four black appendages that hang down from its head,
     which rise when Lucario reads or manipulates aura, a special energy that it
@@ -242,7 +298,6 @@
 
   <button type="button" onclick="myFunction()">Click to Rank the Pokemon!</button>
 
-  <hr />
   <p>
     Thank you so much for looking at my website! Thank you, Dr. J, for being
     such a cool teacher &#128516;!
