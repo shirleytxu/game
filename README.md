@@ -1,3 +1,7 @@
+# CSS Portion
+* Finished pokeWebsite.html and mystyle.css
+* Commit ID: 97c1d63
+
 # HTML-Website
 * I finished my pokewebsite.html! 
 * Commit ID: 2d16677
