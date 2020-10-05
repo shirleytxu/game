@@ -1,10 +1,10 @@
 # Bootstrap Portion 
 * Five things I included in my website: 
- * Spinners
- * Progress bar
- * Input
- * Card
- * Alert
+   - Spinners
+   - Progress bar
+   - Input
+   - Card
+   - Alert
 * Commit ID: d6e2b9b
 
 # CSS Portion
