@@ -1,96 +1,86 @@
+  <style>p.inset {
+    outline-style: inset;
+  }
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  p.outset {
+    border-style: outset;
+  }
 
-  <style>
-    p.inset {
-      outline-style: inset;
-    }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
 
-    p.outset {
-      border-style: outset;
-    }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
 
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      padding: 12px 16px;
-      z-index: 1;
-    }
+  #C1 {
+    border: 1.3px solid yellowgreen;
+  }
 
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
+  #C2 {
+    border: 1.3px solid yellowgreen;
+  }
 
-    div {
-      border: 1px solid green;
-      margin: 50px 50px 50px 50px;
-      background-color: lightgreen;
-    }
+  #C3 {
+    border: 1.3px solid yellowgreen;
+  }
 
-    #C1 {
-      border: 1.3px solid yellowgreen;
-    }
+  .centerimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    #C2 {
-      border: 1.3px solid yellowgreen;
-    }
+  body {
+    background-color: rgb(230, 255, 242);
+  }
 
-    #C3 {
-      border: 1.3px solid yellowgreen;
-    }
+  a:link {
+    color: darkgreen;
+    background-color: transparent;
+    text-decoration: none;
+  }
 
-    .centerimg {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  a:visited {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
 
-    body {
-      background-color: rgb(230, 255, 242);
-    }
+  a:hover {
+    color: lightgreen;
+    background-color: transparent;
+    text-decoration: underline;
+  }
 
-    a:link {
-      color: darkgreen;
-      background-color: transparent;
-      text-decoration: none;
-    }
+  a:active {
+    color: darkgreen;
+    background-color: transparent;
+    text-decoration: underline;
+  }
 
-    a:visited {
-      color: green;
-      background-color: transparent;
-      text-decoration: none;
-    }
+  table,
+  th,
+  td {
+    border: 1px solid green;
+    border-collapse: collapse;
+  }
 
-    a:hover {
-      color: lightgreen;
-      background-color: transparent;
-      text-decoration: underline;
-    }
+  th,
+  td {
+    padding: 15px;
+  }
 
-    a:active {
-      color: darkgreen;
-      background-color: transparent;
-      text-decoration: underline;
-    }
-
-    table,
-    th,
-    td {
-      border: 1px solid green;
-      border-collapse: collapse;
-    }
-
-    th,
-    td {
-      padding: 15px;
-    }
   </style>
