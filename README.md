@@ -1,3 +1,5 @@
+For the collaboration project, please just look at the latest commit, thanks!
+
 # Bootstrap Portion 
 * Five things I included in my website: 
    - Spinners
