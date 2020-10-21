@@ -1,7 +1,4 @@
-  <style>p.inset {
-    outline-style: inset;
-  }
-
+  <style>
   p.outset {
     border-style: outset;
   }
@@ -10,6 +7,9 @@
     position: relative;
     display: inline-block;
   }
+    html {
+      cursor: url('eeveesprite.png'), auto;
+    }
 
   .dropdown-content {
     display: none;
@@ -80,7 +80,7 @@
 
   th,
   td {
-    padding: 15px;
+    padding: 20px;
   }
 
   </style>
