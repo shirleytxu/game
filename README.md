@@ -1,4 +1,5 @@
-For the collaboration project, please just look at the latest commit, thanks!
+#Final
+* Commit ID: 6176263
 
 # Bootstrap Portion 
 * Five things I included in my website: 
