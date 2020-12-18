@@ -20,10 +20,10 @@ function applyVelocity (position, velocity) {
 }
 
 // Count frames, track time so we can compute fps rate
-var frames = 0;
-var start = new Date();
-var now = new Date();
-console.log(start);
+// var frames = 0;
+// var start = new Date();
+// var now = new Date();
+// console.log(start);
 
 function myKeyDown (event) {
   /*
@@ -42,19 +42,27 @@ function myKeyDown (event) {
 
   if (keyStr == 'w') {
     // Move circle up
-    circleVel[1] -= 1;
+    if (Math.abs(circleVel[1]) <= 3){
+      circleVel[1] -= 1;
+    }
   }
   if (keyStr == 'a') {
-    // Move circle left
-    circleVel[0] -= 1;
+    if (Math.abs(circleVel[0]) <= 3){
+      // Move circle left
+      circleVel[0] -= 1;
+    }
   }
   if (keyStr == 's') {
-    // Move circle down
-    circleVel[1] += 1;
+    if (Math.abs(circleVel[1]) <= 3){
+      // Move circle down
+      circleVel[1] += 1;
+    }
   }
   if (keyStr == 'd') {
-    // Move circle right
-    circleVel[0] += 1;
+    if (Math.abs(circleVel[0]) <= 3){
+      // Move circle right
+      circleVel[0] += 1;
+    }
   }
 }
 
@@ -131,7 +139,4 @@ document.addEventListener("keydown", myKeyDown);
 circlePos = [ Math.floor(canvas.width / 2), Math.floor(canvas.height / 2), 25];
 
 // Fire up the animation engine
-while true {
-  window.requestAnimationFrame(drawAll);
-  if
-}
+window.requestAnimationFrame(drawAll);
