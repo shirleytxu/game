@@ -36,9 +36,9 @@ function myKeyDown (event) {
   //   that was pressed to trigger the event listener.
   keyCode = event.which;
   keyStr = event.key;
-  console.log(event);
-  console.log(keyCode);
-  console.log(keyStr);
+  //console.log(event);
+  //console.log(keyCode);
+  //console.log(keyStr);
 
   if (keyStr == 'w') {
     // Move circle up
@@ -67,9 +67,8 @@ function myKeyDown (event) {
 }
 
 function distance (circlePosX, circlePosY, point1X, point1Y) {
-  distance = Math.sqrt((circlePosX - point1X)^2 + (circlePosY - point1Y)^2);
-  console.log(distance);
-  return distance;
+  var d= Math.sqrt((circlePosX - point1X)*(circlePosX - point1X) + (circlePosY - point1Y)*(circlePosY - point1Y));
+  return d;
 }
 
 function drawAll()
@@ -118,21 +117,37 @@ function drawAll()
   context.stroke();
 
   if ((circlePos[0] <=0) || (circlePos[0] >= canvas.width) || (circlePos[1] <=0) || (circlePos[1] >= canvas.height)){
-    alert("GAME OVER");
+    console.log("gameover1")
+    alert("GAME OVER 1");
   }
 
+  intersection = false;
   for (t=0; t<100; t++){
-   point1 = [0,0];
-   point1[0] = (1-t)*linePos[0] + t*linePos[2];
-   point1[1] = (1-t)*linePos[1] + t*linePos[3];
-   if ((distance(parseInt(circlePos[0]), parseInt(circlePos[1]), parseInt(point1[0]), parseInt(point1[1]))) <= parseInt(circlePos[2])) {
-     alert("GAME OVER");
+     point1 = [0,0];
 
-     }
- }
-
-  // Loop the animation to the next frame.
-  window.requestAnimationFrame(drawAll);
+     // console.log("linePos", linePos);
+     // console.log("circlePos", circlePos);
+     point1[0] = (1-t/100)*linePos[0] + t/100*linePos[2];
+     point1[1] = (1-t/100)*linePos[1] + t/100*linePos[3];
+     var dis = distance(circlePos[0], circlePos[1], point1[0], point1[1]);
+     if (dis <= circlePos[2]) {
+       intersection = true;
+       break;
+       }
+   }
+   if (!intersection) {
+     // Loop the animation to the next frame.
+     window.requestAnimationFrame(drawAll);
+   }
+   else {
+      console.log("intercept line, game over");
+      console.log("point1", point1);
+      console.log("dis", dis);
+      console.log("circlePos", circlePos);
+      console.log("animFrame", animFrame);
+      
+      alert("GAME OVER 2");
+   }
 }
 
 // Get width/height of the browser window
@@ -158,4 +173,5 @@ document.addEventListener("keydown", myKeyDown);
 circlePos = [ Math.floor(canvas.width / 2), Math.floor(canvas.height / 2), 25];
 
 // Fire up the animation engine
-window.requestAnimationFrame(drawAll);
+animFrame = window.requestAnimationFrame(drawAll);
+console.log(animFrame);
