@@ -19,11 +19,6 @@ function applyVelocity (position, velocity) {
   }
 }
 
-// Count frames, track time so we can compute fps rate
-// var frames = 0;
-// var start = new Date();
-// var now = new Date();
-// console.log(start);
 
 function myKeyDown (event) {
   /*
@@ -36,9 +31,6 @@ function myKeyDown (event) {
   //   that was pressed to trigger the event listener.
   keyCode = event.which;
   keyStr = event.key;
-  //console.log(event);
-  //console.log(keyCode);
-  //console.log(keyStr);
 
   if (keyStr == 'w') {
     // Move circle up
@@ -117,8 +109,7 @@ function drawAll()
   context.stroke();
 
   if ((circlePos[0] <=0) || (circlePos[0] >= canvas.width) || (circlePos[1] <=0) || (circlePos[1] >= canvas.height)){
-    console.log("gameover1")
-    alert("GAME OVER 1");
+    alert("GAME OVER");
   }
 
   intersection = false;
@@ -140,13 +131,7 @@ function drawAll()
      window.requestAnimationFrame(drawAll);
    }
    else {
-      console.log("intercept line, game over");
-      console.log("point1", point1);
-      console.log("dis", dis);
-      console.log("circlePos", circlePos);
-      console.log("animFrame", animFrame);
-      
-      alert("GAME OVER 2");
+      alert("GAME OVER");
    }
 }
 
@@ -174,4 +159,3 @@ circlePos = [ Math.floor(canvas.width / 2), Math.floor(canvas.height / 2), 25];
 
 // Fire up the animation engine
 animFrame = window.requestAnimationFrame(drawAll);
-console.log(animFrame);
